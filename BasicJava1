@@ -1,0 +1,44 @@
+*/Write a program in Java to accept the details of 10 Students. Display the total count of students who are eligible for taking admission in Graduation 1st Year if age is greater than 18.
+
+Details will be 
+
+studentName
+StudentAge
+*/
+
+import java.util.Scanner;
+
+public class mydetails {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		String Stname;
+		int Stage;
+		int j=0;
+		Scanner sc= new Scanner(System.in);
+		 
+		 
+		 
+		for(int i=0; i<10;i++)
+		{
+		
+		System.out.println("Enter the name of Student :");
+		Stname=sc.next();
+		
+		System.out.println("Enter Age of Student:");
+		Stage=sc.nextInt();
+		if(Stage>=18)
+			
+		{
+			j++;
+		}
+		
+		}  
+		
+		System.out.println("Total Count of Student who are eligible for the 1st year admission is:"+j);
+		
+	}
+
+}
