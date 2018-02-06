@@ -1,0 +1,77 @@
+/*
+Write a program in Java to accept the details of 10 Employees.Display the total bonus given to the employees during festival season. Bonus Criteria is given below.
+if Salary is . 10000 Bonus will be 30%
+if Salary is . 50000 Bonus will be 20%
+if Salary is . 100000 Bonus will be 10%
+Details will be   : EmployeeName   : EmployeeSalary
+*/
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Harshali
+ */
+
+import java.util.Scanner;
+
+public class EmpSalary {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String EmpName=null;
+		int EmpSal;
+		Double bonus, sal=0.0;
+		
+		Scanner sc=new Scanner(System.in);
+		
+		int i=0;
+		
+		for(i=0;i<10;i++)
+		{
+			
+	
+		System.out.println("Enter the name of Employee:");
+		EmpName=sc.next();
+		
+		System.out.println("Enter the Salary of Employee :");
+		EmpSal=sc.nextInt();
+		
+		if(EmpSal<=10000)
+		{
+			bonus=(EmpSal*0.3)/100;
+			sal=EmpSal+bonus;
+                        System.out.println(EmpName+" "+"salary"+" "+"is"+" "+sal); 
+		}
+		
+			
+		else if(EmpSal<=50000)
+		{
+			bonus=(EmpSal*0.2)/100;
+			sal=EmpSal+bonus;
+                        System.out.println(EmpName+" "+"salary"+" "+"is"+" "+sal); 
+		}
+			
+		else if(EmpSal<=100000)
+		{
+			bonus=(EmpSal*0.1)/100;
+			sal=EmpSal+bonus;
+                        System.out.println(EmpName+" "+"salary"+" "+"is"+" "+sal); 
+		}
+                else 
+                {
+                    System.out.println("no bonus to"+" "+EmpName);
+                    System.out.println(EmpName+" "+"salary"+" "+"is"+" "+EmpSal); 
+                }
+				
+		}
+		
+		
+	}
+
+}
