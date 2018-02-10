@@ -1,0 +1,51 @@
+/*
+Qu 4. Write a program to accept 10 number using array and display the sum and average of 10 numbers.
+*/
+import java.util.Scanner;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Harshali
+ */
+public class arraysum {
+    
+    public static void main(String [] arg)
+    {
+        int [] asort=new int [5] ;
+        int sum=0;
+        Double avg=0.0;
+        Scanner sc=new Scanner(System.in);
+        int i=0;
+        for(i=0;i<asort.length;i++)
+        {
+            System.out.println("Enter the elements");
+            asort[i]=sc.nextInt(); 
+         
+        }
+        
+ // Summing all elements
+                double total = 0;
+                for ( i = 0; i < asort.length; i++) 
+                {
+                total += asort[i];
+                avg=total/asort.length;
+                 }
+        
+        for(i=0;i<asort.length;i++)
+        {
+    
+            System.out.println(+asort[i]);
+        }
+        
+       System.out.println("sum is"+total);
+        System.out.println("avg is:"+avg);
+        
+    }
+    
+}
