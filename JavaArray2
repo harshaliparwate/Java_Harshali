@@ -1,0 +1,54 @@
+/*
+Qu 5. Write a program to accept marks of 10 students using array and display the name of highest scorer.
+
+
+*/
+import java.util.Scanner;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Harshali
+ */
+public class StudentArray {
+    
+     public static void main(String [] arg)
+    {
+        int [] Studentarray=new int [10] ;
+        int [] marks=new int [10];
+      
+        Scanner sc=new Scanner(System.in);
+        int i=0;
+        for(i=0;i<Studentarray.length;i++)
+        {
+            System.out.println("Enter the student roll no");
+            Studentarray[i]=sc.nextInt(); 
+            
+            System.out.println("Enter the marks"+marks[i]); 
+            marks[i]=sc.nextInt(); 
+        }
+        
+        double highScore=marks[0];
+        
+        for(i=0;i<Studentarray.length;i++)
+        {
+            if(marks[i]>highScore)
+            {
+                highScore=marks[i];
+               
+                 System.out.println(Studentarray[i]+" "+"roll number has highest score: "+" "+highScore);
+            }
+           
+        }
+        
+      
+                
+        
+    }
+}
+_____________________________________________________________________
