@@ -1,0 +1,105 @@
+/*
+
+Qu 7. Write a menu driven program for calculator using Java Language. Menu Details are mentioned below :-
+
+
+*/
+import java.util.Scanner;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Harshali
+ */
+public class CalciSwitch {
+    public  static int add(int a,int b)
+    {
+      
+        int z;
+        z=a+b;
+        return (z);
+    }
+    
+    public static int sub(int a,int b)
+    {
+       int z;
+        z=a-b;
+        return (z);
+    }
+    
+    public  static int mul(int a,int b)
+    {
+        
+        int z;
+        z=a*b;
+        return (z);
+    }
+    
+    public  static int div(int a,int b)
+    {
+       
+        int z;
+        z=a/b;
+        return (z);
+    }
+    
+    public static void main (String [] arg)
+    {
+        
+        int num1, num2,ch,c,out;
+        Scanner sc=new Scanner(System.in);
+        
+        System.out.println("Enter the the 1st num:");
+        num1=sc.nextInt();
+        
+         System.out.println("Enter the the 2nd num:");
+        num2=sc.nextInt();
+        
+        System.out.println("Enter your choice:");
+        System.out.println("1.Addition");
+        System.out.println("2.substraction");
+        System.out.println("3.Multiplication");
+        System.out.println("4.Division");
+        System.out.println("5.Exit");
+        CalciSwitch c1=new CalciSwitch();
+        ch=sc.nextInt();
+        switch(ch)
+                {
+                   case 1 : 
+                     out=c1.add(num1,num2);
+                    System.out.println("Addition is"+" "+out); 
+                    break;
+                       
+                    case 2 : 
+                    out=c1.sub(num1,num2);
+                    System.out.println("Substraction is"+" "+out);
+                   break;
+                           
+                   case 3 : 
+                    out=c1.mul(num1,num2);
+                    System.out.println("multiplication is"+" "+out);
+                   break;
+                               
+                    case 4 : 
+                    out=c1.div(num1,num2);
+                    System.out.println("Division is"+" "+out);
+                    break;
+                                   
+                    case 5: 
+                    System.out.println("Thnk you");
+                     break;
+                    
+                    default: 
+                        System.out.println("iNVALID CHOICE");
+                    break;
+                                              
+                }
+          
+    }
+}
+
