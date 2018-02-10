@@ -1,0 +1,80 @@
+/*
+Qu 8. Write a Java Program to accept the Name and Salary of five employees using array variable and perform below task.
+
+	1. Display the name of employee who is getting paid highest
+	2. Display the name of employee who is getting paid Lowest
+	3. Display the Average Salary of Employees
+
+*/
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaexampls;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Harshali
+ */
+public class EmpSalArray {
+    public static void main(String [] arg)
+    {
+        String [] empname =new String [50];
+        int [] sal=new int [20];
+        int n;
+        
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number of employee");
+        n=sc.nextInt();
+       
+        for(int i=0;i<n;i++)
+        {
+         System.out.println("Enter the name of employee");
+        empname[i]=sc.next();
+        System.out.println("Enter salary of employee");
+        sal[i]=sc.nextInt();
+        
+        }
+      
+         for(int i=0;i<n;i++)
+        {
+            System.out.println("name:"+" "+empname[i]+" | "+"salary :"+" "+sal[i]);
+      
+       }
+        int  highest=sal[0];
+        //int lowest=0;
+       for(int i=0;i<n;i++)
+       {
+            if (sal[i]>highest)
+            {
+                highest=sal[i];
+                System.out.println(empname[i]+" has hisgest salary"+" "+highest);
+            }
+        }
+       
+      
+       
+         int lowest=sal[0];
+         int sum=0;
+         double avg=0;
+         
+       for(int j=0;j<n;j++)
+      {
+           
+            while(sal[j]<lowest)
+            {
+                lowest=sal[j];
+                System.out.println(empname[j]+" has lowest salary"+" "+lowest);
+            }
+            sum+=sal[j];
+            avg=sum/n;
+      }
+       System.out.println("avg salary is "+avg);
+       
+    }
+    
+}
+
